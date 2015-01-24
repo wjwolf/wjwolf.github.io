@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Class Project</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Class Project">
+  <meta name="author" content="Bill Wolf">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Class Project</h1>
+    <h2>Developing Data Products</h2>
+    <p>Bill Wolf<br/></p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Converting between units of measure ...</h2>
+  </hgroup>
+  <article data-timings="">
+    <div align="right">
+    <h2>can be confusing!!</h2>
+    <br/>
+</div>
+
+<div align="left">
+    <img src="assets/img/ruler.png" height="100" width="100"/>
+    </br>
+    <h3>&bull;&nbsp;How many milimeters are in an inch?</h3>
+    <br/>
+</div>
+
+<div align="center">
+    <h3>&bull;&nbsp;How many kilometers are there in 23.2 miles?</h3>
+    <br/>
+</div>
+
+<div align="right">
+    <h3>&bull;&nbsp;What is 200.3 degrees Fareheit in Celcius?</h3>
+    <br/>
+    <img src="assets/img/thermometer.png" height="100" width="100"/>
+</div>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>There are many many formulas to remember</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><h3>For example converting tempature is<h3></p>
+
+<div align="center">
+    <table border="1" align="center">
+        <tr border="1" align="center">
+            <td><strong>&deg;F&nbsp;to&nbsp;&deg;C</strong></td>
+            <td>Subtract 32, multiply by 5, then divide by 9</td>
+        </tr>
+        <tr border="1" align="center">
+            <td><strong>&deg;C&nbsp;to&nbsp;&deg;F</strong></td>
+            <td>Multiply by 9, divide by 5, then add 32</td>
+        </tr>
+    </table>
+</div>
+
+<p><br/>
+<h3>and converting between miles and kilometers is<h3></p>
+
+<div align="center">
+    <table border="1" align="center">
+        <tr border="1" align="center">
+            <td><strong>mile to kilometer</strong></td>
+            <td>Divide miles by 0.62137</td>
+        </tr>
+        <tr border="1" align="center">
+            <td><strong>kilometer to mile</strong></td>
+            <td>Multiply kilometers by 0.62137</td>
+        </tr>
+    </table>
+</div>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>But help is at hand!!</h2>
+  </hgroup>
+  <article data-timings="">
+    <h3>Use Bill's Conversion App -- New! Improved! Shiny!</h3>
+
+<p><img src="assets/img/conversion_app.png"/></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Powered by R</h2>
+  </hgroup>
+  <article data-timings="">
+    <h3>&bull;&nbsp;How many kilometers are there in 23.2 miles?</h3>
+
+<pre><code class="r">  miles&lt;-23.2
+  kilometers&lt;-miles/0.62137
+  print(round(kilometers,digits=2))
+</code></pre>
+
+<pre><code>## [1] 37.34
+</code></pre>
+
+<h3>&bull;&nbsp;What is 200.3 degrees Fareheit in Celcius?</h3>
+
+<pre><code class="r">  farenheit&lt;-200.3
+  celcius&lt;- (farenheit - 32) * 5 / 9
+  print(round(celcius,digits=2))
+</code></pre>
+
+<pre><code>## [1] 93.5
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Converting between units of measure ...'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='There are many many formulas to remember'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='But help is at hand!!'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Powered by R'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
